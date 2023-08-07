@@ -4,6 +4,12 @@ class Node(object):
         self.data = data
         self.next = next
 
+class TwoWayNode(object):
+    def __init__(self, data, previous=None, next=None):
+        Node.__init__(data, next=next)
+        self.previous = previous
+
+
 # Creating 3 differents nodes 
 node1 = None
 node2 = Node("A", None)
