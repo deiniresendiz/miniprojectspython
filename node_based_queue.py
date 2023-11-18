@@ -4,6 +4,7 @@ class TwoWayNode():
         self.next = next
         self.previous = previous
 
+
 class Queue:
     def __init__(self) -> None:
         self.head = None
@@ -19,9 +20,9 @@ class Queue:
             new_node.previous = self.tail
             self.tail.next = new_node
             self.tail = new_node
-        
+
         self.count += 1
-    
+
     def dequeue(self):
         current = self.head
 
@@ -36,7 +37,8 @@ class Queue:
             self.count -= 1
 
         return current.data
-    
+
+
 if __name__ == '__main__':
     food = Queue()
     food.enqueue('eggs')
